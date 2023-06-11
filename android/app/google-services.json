@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "728288465201",
+    "project_id": "prjctjestha",
+    "storage_bucket": "prjctjestha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728288465201:android:5a2ac9f863477ccf982010",
+        "android_client_info": {
+          "package_name": "com.example.news_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqm21HS8JlHb--73mLL8ZLnkFjWR4Iblw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728288465201:android:333539365c9ea8f5982010",
+        "android_client_info": {
+          "package_name": "com.example.prjct_jestha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqm21HS8JlHb--73mLL8ZLnkFjWR4Iblw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

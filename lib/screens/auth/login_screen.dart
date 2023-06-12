@@ -1,6 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/widgets/show_error_dialog.dart';
 
 import '../../const/routes.dart';
+import '../../firebase_options.dart';
 import '../../widgets/custom_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -65,8 +69,44 @@ class _LoginScreenState extends State<LoginScreen> {
             getVerticalHeight(height: 50),
 
             InkWell(
-              onTap: () {
-                print("login");
+              onTap: () async {
+                try {
+                  await Firebase.initializeApp(
+                    options: DefaultFirebaseOptions.currentPlatform,
+                  );
+                  final email = _email.text;
+                  final password = _password.text;
+                  await FirebaseAuth.instance.signInWithEmailAndPassword(
+                    email: email,
+                    password: password,
+                  );
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      homeScreenRoute, (route) => false);
+                } on FirebaseAuthException catch (e) {
+                  if (e.code == 'invalid-email') {
+                    return await showErrorDialog(
+                      context,
+                      "Please provide a valid email",
+                    );
+                  } else if (e.code == 'user-not-found') {
+                    return await showErrorDialog(
+                      context,
+                      "User not found",
+                    );
+                  } else if (e.code == 'wrong-password') {
+                    return await showErrorDialog(
+                      context,
+                      "Wrong password",
+                    );
+                  } else {
+                    return await showErrorDialog(
+                      context,
+                      'Error:${e.code}',
+                    );
+                  }
+                } catch (e) {
+                  print(e.toString());
+                }
               },
               child: Container(
                 height: 50,

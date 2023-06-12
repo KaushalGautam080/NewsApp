@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/widgets/show_error_dialog.dart';
 
 import '../../const/routes.dart';
 import '../../firebase_options.dart';
@@ -64,8 +65,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   obscureText = !obscureText;
                 });
               },
+              textInputType: TextInputType.emailAddress,
             ),
-            getVerticalHeight(height: 50),
+            getVerticalHeight(
+              height: 50,
+            ),
 
             InkWell(
               onTap: () async {
@@ -81,8 +85,30 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     password: password,
                   );
                   print(userCred);
+                } on FirebaseAuthException catch (e) {
+                  if (e.code == 'email-already-in-use') {
+                    return await showErrorDialog(
+                      context,
+                      "Email is already in use",
+                    );
+                  } else if (e.code == 'invalid-email') {
+                    return await showErrorDialog(
+                      context,
+                      "Please provide a valid email",
+                    );
+                  } else if (e.code == 'weak-password') {
+                    return await showErrorDialog(
+                      context,
+                      "Too weak password",
+                    );
+                  } else {
+                    return await showErrorDialog(context, 'Error: ${e.code}');
+                  }
                 } catch (e) {
-                  print(e.toString());
+                  return showErrorDialog(
+                    context,
+                    e.toString(),
+                  );
                 }
 
                 // Navigator.pushNamed(context, loginRoute);

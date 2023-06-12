@@ -13,7 +13,7 @@ class CustomFormField extends StatelessWidget {
     required this.iconData,
     required this.hintText,
     this.textInputType,
-    this.obscureText = true,
+    this.obscureText = false,
     this.onPressedEye,
     this.controller,
   }) : super(key: key);

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/screens/auth/login_screen.dart';
 import 'package:news_app/screens/auth/register_screen.dart';
+import 'package:news_app/screens/ui/home_screen.dart';
 
 import 'const/routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -15,15 +17,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const RegisterScreen(),
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
       routes: {
         loginRoute: (context) => const LoginScreen(),
+        registerRoute: (context) => const RegisterScreen(),
+        homeScreenRoute: (context) => const HomeScreen(),
       },
     );
   }
 }
+
+// class HomePage extends StatelessWidget {
+//   const HomePage({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return FutureBuilder(
+//         future: Firebase.initializeApp(
+//           options: DefaultFirebaseOptions.currentPlatform,
+//         ),
+//         builder: (context, snapshot) {
+//           final user = FirebaseAuth.instance.currentUser;
+//           if (user != null) {
+//             return const HomeScreen();
+//           } else {
+//             return const LoginScreen();
+//           }
+//         });
+//   }
+// }

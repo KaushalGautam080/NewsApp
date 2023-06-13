@@ -3,7 +3,7 @@
 A News App is an ios app for reading news in an phone. This app has a feature of register and login user using firebase. The user can read various news related Tesla, Business and Apple. The data is taken from newsapi.org using RESTAPIs.
 
 ## Screenshots
-![registerPage](https://github.com/KaushalGautam080/NewsApp/assets/101984287/2d0ebd3a-f2cc-416b-990c-336004697417)
+![registerPage](https://github.com/KaushalGautam080/NewsApp/assets/101984287/2d0ebd3a-f2cc-416b-990c-336004697417 = 400*250)
 ![loginPage](https://github.com/KaushalGautam080/NewsApp/assets/101984287/e6db3885-5044-49c3-b935-8ad13dd6383b)
 ![invalidEmail](https://github.com/KaushalGautam080/NewsApp/assets/101984287/67186a05-11be-44ff-8241-c22eb592ca58)
 ![wrongPassword](https://github.com/KaushalGautam080/NewsApp/assets/101984287/d0809584-3599-4b85-96e6-e745a6c43ea3)

@@ -6,7 +6,7 @@ import '../model/article_model.dart';
 
 class AppleApi {
   final endPoint =
-      "https://newsapi.org/v2/everything?q=apple&from=2023-06-11&to=2023-06-11&sortBy=popularity&apiKey=963248fe7e3947989f7a78657ca35d89";
+      "https://newsapi.org/v2/everything?q=apple&from=2023-06-12&to=2023-06-12&sortBy=popularity&apiKey=963248fe7e3947989f7a78657ca35d89";
 
   Future<List<Article>?> getAppleArticle() async {
     try {

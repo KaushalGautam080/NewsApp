@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/const/routes.dart';
 import 'package:news_app/widgets/custom_button.dart';
 
 class NewsCategory extends StatefulWidget {
@@ -37,9 +38,21 @@ class _NewsCategoryState extends State<NewsCategory> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              CustomButton(text: "Apple News", onPressed: () {}),
-              CustomButton(text: "Tesla News", onPressed: () {}),
-              CustomButton(text: "Business News", onPressed: () {}),
+              CustomButton(
+                  text: "Apple News",
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(appleNewsRoute);
+                  }),
+              CustomButton(
+                  text: "Tesla News",
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(teslaNewsRoute);
+                  }),
+              CustomButton(
+                  text: "Business News",
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(businessNewsRoute);
+                  }),
             ],
           ),
         ),

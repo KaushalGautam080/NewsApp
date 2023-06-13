@@ -6,8 +6,7 @@ import '../model/article_model.dart';
 
 class TeslaApi {
   final endPoint =
-      "https://newsapi.org/v2/everything?q=tesla&from=2023-05-12&sortBy=publishedAt&apiKey=963248fe7e3947989f7a78657ca35d89";
-
+      "https://newsapi.org/v2/everything?q=tesla&from=2023-05-13&sortBy=publishedAt&apiKey=963248fe7e3947989f7a78657ca35d89";
   Future<List<Article>?> getTeslaApi() async {
     final response = await http.get(Uri.parse(endPoint));
     try {

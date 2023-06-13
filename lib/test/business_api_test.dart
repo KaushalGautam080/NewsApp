@@ -20,11 +20,11 @@ class _BusinessApiTestState extends State<BusinessApiTest> {
         centerTitle: false,
         backgroundColor: Colors.white,
         title: const Text(
-          "Welcome,",
+          "Business News",
           style: TextStyle(
             color: Colors.black87,
             fontWeight: FontWeight.bold,
-            fontSize: 30,
+            fontSize: 25,
           ),
         ),
         elevation: 0,

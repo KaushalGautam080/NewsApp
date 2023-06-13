@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:news_app/screens/auth/login_screen.dart';
 import 'package:news_app/screens/auth/register_screen.dart';
 import 'package:news_app/screens/ui/home_screen.dart';
+import 'package:news_app/test/apple_api_test.dart';
+import 'package:news_app/test/business_api_test.dart';
+import 'package:news_app/test/tesla_api_test.dart';
 
 import 'const/routes.dart';
 import 'firebase_options.dart';
@@ -26,6 +29,9 @@ class MyApp extends StatelessWidget {
         loginRoute: (context) => const LoginScreen(),
         registerRoute: (context) => const RegisterScreen(),
         homeScreenRoute: (context) => const HomeScreen(),
+        appleNewsRoute: (context) => const AppleApiTest(),
+        businessNewsRoute: (context) => const BusinessApiTest(),
+        teslaNewsRoute: (context) => const TeslaApiTest(),
       },
     );
   }

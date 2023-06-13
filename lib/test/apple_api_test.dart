@@ -20,7 +20,7 @@ class _AppleApiTestState extends State<AppleApiTest> {
         centerTitle: false,
         backgroundColor: Colors.white,
         title: const Text(
-          "Welcome,",
+          "Apple News",
           style: TextStyle(
             color: Colors.black87,
             fontWeight: FontWeight.bold,

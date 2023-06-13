@@ -37,6 +37,13 @@ class CustomNewsBox extends StatelessWidget {
             onTap: onPressed,
             child: Container(
               decoration: BoxDecoration(
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 2.0,
+                    blurStyle: BlurStyle.solid,
+                  )
+                ],
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(9.0),
                 image: DecorationImage(

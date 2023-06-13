@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/navigation_bar_items/news_category.dart';
 import 'package:news_app/navigation_bar_items/profile.dart';
+import 'package:news_app/test/apple_api_test.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,8 +13,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   final tabs = const [
-    Text("Home"),
-    Text("news"),
+    AppleApiTest(),
+    NewsCategory(),
     Profile(),
   ];
 
@@ -20,38 +22,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // print(_selectedIndex);
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        actions: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text("Hello"),
-              //search icon
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.search_outlined,
-                  color: Colors.black87,
-                  size: 40,
-                ),
-              ),
-              // const SizedBox(width: 15),
-              //notification icon
-              IconButton(
-                padding: const EdgeInsets.only(right: 20),
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.circle_notifications_rounded,
-                  color: Colors.black87,
-                  size: 40,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
       body: tabs[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.grey,

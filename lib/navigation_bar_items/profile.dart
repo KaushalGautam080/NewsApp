@@ -12,56 +12,70 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-            "images/new.jpeg",
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        backgroundColor: Colors.white,
+        title: const Text(
+          "Profile",
+          style: TextStyle(
+            color: Colors.black87,
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
           ),
-          fit: BoxFit.fill,
         ),
       ),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.only(
-              left: 10.0,
-              top: 10.0,
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              "images/new.jpeg",
             ),
-            child: CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 80.0,
-              child: Icon(
-                Icons.person,
-                color: Colors.black87,
-                size: 70,
+            fit: BoxFit.fill,
+          ),
+        ),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(
+                left: 10.0,
+                top: 10.0,
+              ),
+              child: CircleAvatar(
+                backgroundColor: Colors.white,
+                radius: 80.0,
+                child: Icon(
+                  Icons.person,
+                  color: Colors.black87,
+                  size: 70,
+                ),
               ),
             ),
-          ),
-          getVerticalHeight(),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 10.0,
+            getVerticalHeight(),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 10.0,
+              ),
+              child: CustomButton(
+                text: "Logout",
+                onPressed: () {
+                  try {
+                    FirebaseAuth.instance.signOut();
+                    Navigator.of(context)
+                        .pushNamedAndRemoveUntil(loginRoute, (route) => false);
+                  } catch (e) {
+                    print(
+                      e.toString(),
+                    );
+                  }
+                },
+              ),
             ),
-            child: CustomButton(
-              text: "Logout",
-              onPressed: () {
-                try {
-                  FirebaseAuth.instance.signOut();
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
-                } catch (e) {
-                  print(
-                    e.toString(),
-                  );
-                }
-              },
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

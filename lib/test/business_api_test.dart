@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/api/api_services/apple_api.dart';
 import 'package:news_app/widgets/custom_news_box.dart';
 
+import '../api/api_services/business_api.dart';
 import '../api/model/article_model.dart';
 
-class AppleApiTest extends StatefulWidget {
-  const AppleApiTest({Key? key}) : super(key: key);
+class BusinessApiTest extends StatefulWidget {
+  const BusinessApiTest({Key? key}) : super(key: key);
 
   @override
-  State<AppleApiTest> createState() => _AppleApiTestState();
+  State<BusinessApiTest> createState() => _BusinessApiTestState();
 }
 
-class _AppleApiTestState extends State<AppleApiTest> {
-  AppleApi appleClient = AppleApi();
+class _BusinessApiTestState extends State<BusinessApiTest> {
+  BusinessApi businessClient = BusinessApi();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +58,7 @@ class _AppleApiTestState extends State<AppleApiTest> {
         ],
       ),
       body: FutureBuilder(
-        future: appleClient.getAppleArticle(),
+        future: businessClient.getBusinessApi(),
         builder:
             (BuildContext context, AsyncSnapshot<List<Article>?> snapshot) {
           if (snapshot.hasData) {
@@ -74,7 +74,7 @@ class _AppleApiTestState extends State<AppleApiTest> {
                     children: [
                       // to be made custom news box
                       CustomNewsBox(
-                        category: "Apple",
+                        category: "Business",
                         title: articles![index].title.toString(),
                         author: articles![index].author.toString(),
                         publishedAt: articles![index].publishedAt.toString(),

@@ -1,6 +1,6 @@
-# news_app
+# News App
 
-A new Flutter project.
+A News App is an ios app for reading news in an phone. This app has a feature of register and login user using firebase. The user can read various news related Tesla, Business and Apple. The data is taken from newsapi.org using RESTAPIs.
 
 ## Getting Started
 

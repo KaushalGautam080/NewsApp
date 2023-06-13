@@ -4,10 +4,13 @@ A News App is an ios app for reading news in an phone. This app has a feature of
 
 ## Screenshots
 
+
 <img src="https://github.com/KaushalGautam080/NewsApp/assets/101984287/2d0ebd3a-f2cc-416b-990c-336004697417" alt="registerPage" width="250" height="500">
 <img src = "https://github.com/KaushalGautam080/NewsApp/assets/101984287/e6db3885-5044-49c3-b935-8ad13dd6383b" alt ="loginPage" width = "250" height = "500">
 <img src = "https://github.com/KaushalGautam080/NewsApp/assets/101984287/67186a05-11be-44ff-8241-c22eb592ca58" alt ="invalidEmail" width = "250" height = "500">
-<img src = "https://github.com/KaushalGautam080/NewsApp/assets/101984287/d0809584-3599-4b85-96e6-e745a6c43ea3" alt ="wrongPassword" width = "250" height = "500">
+
+
+<img src = "https://github.com/KaushalGautam080/NewsApp/assets/101984287/a28836df-760b-4ed3-90fd-96fd149d2dac" alt ="wrongPassword" width = "250" height = "500">
 
 <img src = "https://github.com/KaushalGautam080/NewsApp/assets/101984287/891ccc29-9fa7-4948-9d16-7da7c5ec3ca9" alt ="homeScreen" width = "250" height = "500">
 

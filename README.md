@@ -4,7 +4,7 @@ A News App is an ios app for reading news in an phone. This app has a feature of
 
 ## Screenshots
 <!-- ![registerPage](https://github.com/KaushalGautam080/NewsApp/assets/101984287/2d0ebd3a-f2cc-416b-990c-336004697417 ) -->
-<img src="https://github.com/KaushalGautam080/NewsApp/assets/101984287/2d0ebd3a-f2cc-416b-990c-336004697417" alt="registerPage" width="250" height="600">
+<img src="https://github.com/KaushalGautam080/NewsApp/assets/101984287/2d0ebd3a-f2cc-416b-990c-336004697417" alt="registerPage" width="250" height="500">
 
 ![loginPage](https://github.com/KaushalGautam080/NewsApp/assets/101984287/e6db3885-5044-49c3-b935-8ad13dd6383b)
 ![invalidEmail](https://github.com/KaushalGautam080/NewsApp/assets/101984287/67186a05-11be-44ff-8241-c22eb592ca58)
